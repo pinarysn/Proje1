@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script language="JavaScript">
+            function cinsClick() {
+                var cns = document.form1.rdCinsiyet.value;
+                if (cns == 'E') {
+                    alert('Seçiminiz: Erkek');
+                } else {
+                    alert('Seçiminiz : Kadın');
+                }
+            }
+            function daireClick() {
+                var checkbox = document.querySelectorAll('input[name="chkDaireTuru"]:checked');               
+                var result = '';
+                for (var i = 0; i < checkbox.length; i++) {
+                    if (checkbox[i].value==1)
+                    {
+                        checkbox[i].value= "1+1";
+                    }
+                    if (checkbox[i].value==2)
+                    {
+                        checkbox[i].value= "2+1";
+                    }
+                    if (checkbox[i].value==3)
+                    {
+                        checkbox[i].value= "3+1";
+                    }
+                    if (checkbox[i].value==4)
+                    {
+                        checkbox[i].value= "4+1";
+                    }
+
+                    result += checkbox[i].value + ',  ';
+
+                }
+                alert(result);
+            }
+            function mesClick() {
+                var mes = document.form1.drpMeslek.value;
+
+                if (mes == 1) {
+                    alert('Mühendis '+ mes);
+                }
+                if (mes == 2) {
+                    alert('Doktor ' + mes);
+                }
+                if (mes == 3) {
+                    alert('Avukat ' + mes);
+                }
+                if (mes == 4) {
+                    alert('Öğretmen ' + mes);
+                }
+                if (mes == 5) {
+                    alert('Polis ' + mes);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1">
+            Cinsiyetiniz:
+            <input type="radio" name="rdCinsiyet" value="E" /> Erkek
+            <input type="radio" name="rdCinsiyet" value="K" /> Kadın <br /><br />
+            Daire Türü:
+            <input type="checkbox" name="chkDaireTuru" value="1"  />1+1
+            <input type="checkbox" name="chkDaireTuru" value="2" />2+1
+            <input type="checkbox" name="chkDaireTuru" value="3" />3+1
+            <input type="checkbox" name="chkDaireTuru" value="4" />4+1 <br /><br />
+            Mesleğiniz:
+            <select name="drpMeslek">
+                <option value="O">Lütfen seciniz..</option>
+                <option value="1">Mühendis</option>
+                <option value="2">Doktor</option>
+                <option value="3">Avukat</option>
+                <option value="4">Öğretmen</option>
+                <option value="5">Polis</option>
+            </select>
+            <br /><br />
+            <input type="button" value="Cinsiyetiniz" onclick="cinsClick();" />
+            <input type="button" value="DaireTurunuz" onclick="daireClick();" />
+            <input type="button" value="Mesleğiniz" onclick="mesClick();" />
+        </form>
+    </body>
+</html>

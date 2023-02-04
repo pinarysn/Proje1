@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Çalışmaları</title>
+    <style>
+        p{  
+            color:red;
+            background-color: yellow;
+        }
+        .stil1{
+            background-color:blue;
+            color:white;
+        }
+        #star{
+            background-color:green;
+            color:white;
+        }
+    </style>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+    <input type="text" name="txtTest" style="width:100px;background-color: blue; font-family: 'Times New Roman', Times, serif; color: yellow;"/> <!-- inline stil kullanımı -->           
+    
+    <p>                 <!-- internal tag name ile style kullanımı-->
+        DENEME METNİ 1
+    </p>
+    <p class="stil1">   <!-- internal class ile style kullanımı -->
+        DENEME METNİ 2
+    </p>
+    <p id="star">        <!-- internal id ile style kullanımı -->
+       DENEME METNİ 3
+    </p>
+    <p class="stil2">   <!-- external class ile style kullanımı -->
+        DENEME METNİ 4
+    </p>
+
+</body>
+</html>

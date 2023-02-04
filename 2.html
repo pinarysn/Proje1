@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form name="form1">
+        <!--
+            autocomplete="off" o elementin tarayıcı tarafından otomatik hatırlanmasını engeller
+
+            style = "width:xxx" kullanımı tek element için stil uygular, css ile daha genel uygulayacağız..
+
+
+        -->
+        Adınız : <input autocomplete="off" type="text" name="txtName" style="width:200px;text-align:left" maxlength="50">
+        <br/>Soyadınız : <input autocomplete="off" type="text" name="txtSurname" style="width:200px;text-align:left" maxlength="50">
+        <br/>Cinsiyetiniz
+        <input type="radio" name="rdCinsiyet" value="E">Erkek 
+        <input type="radio" name="rdCinsiyet" value="K">Kadın 
+        <br/>Mesleğiniz:
+        <select name="drpMeslek">
+            <option value="1">Mühendis</option>        
+            <option value="2">Doktor</option>        
+            <option value="3">Avukat</option>        
+            <option value="4">Öğretmen</option>        
+            <option value="5">Polis</option>        
+        </select>
+        <br/>Adresiniz: <textarea name="txtAddress" cols="25" rows="4"></textarea>
+        <br/>Daire Türü:
+        <input type="checkbox" name="chkDaireTuru" value="1">1+1 
+        <input type="checkbox" name="chkDaireTuru" value="2">2+1 
+        <input type="checkbox" name="chkDaireTuru" value="3">3+1 
+        <input type="checkbox" name="chkDaireTuru" value="4">4+1 
+        <br/><br/>
+        <!-- checkbox'ı multiple dropdown'a çevirelim -->
+        Daire Türü (Multiple Dropdown):
+        <select multiple name="drpDaireTuru" size="4" style="width:75px; text-align:right;">
+            <option value="1">1+1</option>        
+            <option value="2">2+1</option>        
+            <option value="3">3+1</option>        
+            <option value="4">4+1</option>              
+        </select>       
+        <br/><br/>
+        <input type="button" name="btnSubmit" value="Kaydet"> 
+    </form>
+</body>
+</html>

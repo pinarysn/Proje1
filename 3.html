@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form name="form1">
+        <!--
+            autocomplete="off" o elementin tarayıcı tarafından otomatik hatırlanmasını engeller
+
+            style = "width:xxx" kullanımı tek element için stil uygular, css ile daha genel uygulayacağız..
+
+
+        -->
+        <center>
+        <table border="1">
+            <tr>
+                <td>Adınız</td> 
+                <td>
+                    <input autocomplete="off" type="text" name="txtName" style="width:200px;text-align:left" maxlength="50">
+                </td>
+            </tr>
+            <tr>
+                <td>Soyadınız</td> 
+                <td>
+                    <input autocomplete="off" type="text" name="txtSurname" style="width:200px;text-align:left" maxlength="50">
+                </td>
+            </tr>
+            <tr>
+                <td>Kurs</td> 
+                <td>
+                    <!-- 
+                        disabled attribute'u ilgili alanın değiştirilmesini engeller
+                    
+                        value attribute'u alanın değerini verir, yani burada textbox'ın içini doldurur
+                    -->
+                    <input disabled autocomplete="off" type="text" name="txtSurname" style="width:200px;text-align:left" maxlength="50" value="İBB 100 Kadın Yazılımcı">
+                </td>
+            </tr>            
+            <tr>
+                <td>Cinsiyetiniz</td>
+                <td>
+                    <input type="radio" name="rdCinsiyet" value="E">Erkek 
+                    <input checked type="radio" name="rdCinsiyet" value="K">Kadın 
+                </td>                    
+            </tr>
+            <tr>
+                <td>Mesleğiniz</td>
+                <td>
+                    <select name="drpMeslek" style="width: 100%;">
+                        <option value="0">Lütfen seçiniz...</option>
+                        <option value="1">Mühendis</option>        
+                        <option value="2">Doktor</option>        
+                        <option value="3">Avukat</option>        
+                        <option value="4">Öğretmen</option>        
+                        <option value="5">Polis</option>        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Adresiniz</td>
+                <td>
+                    <textarea name="txtAddress" cols="25" rows="4"></textarea>
+                </td>    
+            </tr>   
+            <tr>
+                <td>Daire Türü</td>
+                <td>
+                    <input type="checkbox" name="chkDaireTuru" value="1">1+1 
+                    <input type="checkbox" name="chkDaireTuru" value="2">2+1 
+                    <input type="checkbox" name="chkDaireTuru" value="3">3+1 
+                    <input type="checkbox" name="chkDaireTuru" value="4">4+1 
+                </td>
+            </tr>
+            <!-- checkbox'ı multiple dropdown'a çevirelim -->
+            <tr>
+                <td>Daire Türü (Multiple Dropdown)</td>
+                <td>
+                    <select multiple name="drpDaireTuru" size="4" style="width:100%; text-align:left;">
+                        <option value="1">1+1</option>        
+                        <option value="2">2+1</option>        
+                        <option value="3">3+1</option>        
+                        <option value="4">4+1</option>              
+                    </select>       
+                </td>    
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" name="btnSubmit" value="Kaydet">
+                </td>
+            </tr>
+        </table>  
+        </center>  
+    </form>
+</body>
+</html>
